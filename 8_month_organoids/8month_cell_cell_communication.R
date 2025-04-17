@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 # Cell-cell communication using CellChat
 # Open the conda environment with the "CellChat" package
 
