@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 # Unsupervised clustering
 # Looping for different resolution
 
