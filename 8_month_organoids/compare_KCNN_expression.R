@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 # Previously we saw a downregulation in kccn1 and maybe kccn2 (sk channels) in AD GAD1+ cell population.
 # Look and see if the inhibitory neurons or maybe gad1+ AD cells still look like they have this downregulation with the new clustering.
 # Use DESeq2 and pesudobulk for each patient/cell line for comparison
