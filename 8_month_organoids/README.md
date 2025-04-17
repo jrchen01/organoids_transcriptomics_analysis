@@ -1,1 +1,1 @@
-
+This folder contains code for the 8‑month organoids scRNA‑seq analysis, including data distribution checks, clustering and annotation, differential expression analysis, and cell–cell communication analysis.
