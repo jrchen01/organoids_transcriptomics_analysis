@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 # This script aims to check the top genes defining each cluster
 # April 6th, 2025
 
