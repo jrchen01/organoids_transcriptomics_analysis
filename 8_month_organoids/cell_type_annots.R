@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 # Cell type annotation
 #devtools::install_github("immunogenomics/presto")
 library(Seurat)
