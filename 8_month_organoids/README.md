@@ -2,11 +2,6 @@ This folder contains code for the 8‑month organoids scRNA‑seq analysis, incl
 
 ## Software environment
 All analyses were performed in R (version 4.2.2) under CentOS Linux 7 (Core) using conda environment. The complete output of `sessionInfo()` is shown below:
-This folder contains code for the 8‑month organoids scRNA‑seq analysis, including data distribution checks, clustering and annotation, differential expression analysis, and cell–cell communication analysis.
-
-## Software environment
-
-All analyses were performed in R (version 4.2.2) under CentOS Linux 7 (Core) using a conda-managed environment. For full reproducibility, the complete output of `sessionInfo()` is provided below:
 
 ```r
 sessionInfo()
@@ -26,8 +21,8 @@ locale:
 [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 
 attached base packages:
- [1] stats4    stats     graphics  grDevices utils     datasets  methods  
- [8] base     
+[1] stats4    stats     graphics  grDevices utils     datasets  methods  
+[8] base     
 
 other attached packages:
  [1] ashr_2.2-63                 lubridate_1.9.3            
@@ -77,20 +72,20 @@ loaded via a namespace (and not attached):
  [79] pkgload_1.3.4          hms_1.1.3              mime_0.12             
  [82] evaluate_0.24.0        xtable_1.8-4           XML_3.99-0.14         
  [85] fastDummies_1.7.3      gridExtra_2.3          compiler_4.2.2        
- [88] KernSmooth_2.23-24     crayon_1.5.3           htmltools_0.5.8.1    
- [91] later_1.3.2            tzdb_0.4.0             geneplotter_1.76.0   
+ [88] KernSmooth_2.23-24     crayon_1.5.3           htmltools_0.5.8.1     
+ [91] later_1.3.2            tzdb_0.4.0             geneplotter_1.76.0    
  [94] DBI_1.2.3              MASS_7.3-60.0.1        Matrix_1.6-5          
  [97] cli_3.6.4              parallel_4.2.2         dotCall64_1.1-1       
- [100] igraph_1.4.2           pkgconfig_2.0.3        IRdisplay_1.1          
- [103] plotly_4.10.4          spatstat.sparse_3.1-0  annotate_1.76.0       
- [106] XVector_0.38.0         digest_0.6.37          sctransform_0.4.1     
- [109] RcppAnnoy_0.0.22       spatstat.data_3.1-2    Biostrings_2.66.0     
- [112] leiden_0.4.3.1         uwot_0.1.16            shiny_1.8.1.1         
- [115] lifecycle_1.0.4        nlme_3.1-165           jsonlite_1.9.0        
- [118] viridisLite_0.4.2      pillar_1.10.2          lattice_0.22-6        
- [121] KEGGREST_1.38.0        fastmap_1.2.0          httr_1.4.7            
- [124] pkgbuild_1.4.4         survival_3.7.0         glue_1.8.0            
- [127] remotes_2.5.0          png_0.1-8              bit_4.0.5            
- [130] stringi_1.8.4          profvis_0.3.8         blob_1.2.4            
- [133] RcppHNSW_0.6.0         memoise_2.0.1          IRkernel_1.3.2        
- [136] irlba_2.3.5.1          future.apply_1.11.3
+[100] igraph_1.4.2           pkgconfig_2.0.3        IRdisplay_1.1         
+[103] plotly_4.10.4          spatstat.sparse_3.1-0  annotate_1.76.0       
+[106] XVector_0.38.0         digest_0.6.37          sctransform_0.4.1     
+[109] RcppAnnoy_0.0.22       spatstat.data_3.1-2    Biostrings_2.66.0     
+[112] leiden_0.4.3.1         uwot_0.1.16            shiny_1.8.1.1         
+[115] lifecycle_1.0.4        nlme_3.1-165           jsonlite_1.9.0        
+[118] viridisLite_0.4.2      pillar_1.10.2          lattice_0.22-6        
+[121] KEGGREST_1.38.0        fastmap_1.2.0          httr_1.4.7            
+[124] pkgbuild_1.4.4         survival_3.7-0         glue_1.8.0            
+[127] remotes_2.5.0          png_0.1-8              bit_4.0.5             
+[130] stringi_1.8.4          profvis_0.3.8          blob_1.2.4            
+[133] RcppHNSW_0.6.0         memoise_2.0.1          IRkernel_1.3.2        
+[136] irlba_2.3.5.1          future.apply_1.11.3   
