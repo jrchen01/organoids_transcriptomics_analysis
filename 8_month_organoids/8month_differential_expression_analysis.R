@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 # Differential expression analysis using DESeq2
 ## Pay attention to the distribution of gender
 
