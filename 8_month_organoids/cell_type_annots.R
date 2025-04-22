@@ -440,14 +440,14 @@ table(astro_mo8@meta.data$cell_type) #check
 
 saveRDS(astro_mo8, "/raidixshare_logg01/jchen/project/01_sarah_proj/03_seurat_files/seurat_mo8/seurat_8mo_annots_0411.rds")
 
-# Additional analysis in "GABA_INH" cluster
+# Additional analysis in "GABA_INH" cluster - check GABAergic marker expression
 rm(list=ls())
 library(Seurat)
 library(dplyr)
 library(ggplot2)
 astro_mo8 <- readRDS("/raidixshare_logg01/jchen/project/01_sarah_proj/03_seurat_files/seurat_mo8/seurat_8mo_annots_0411.rds")
 Idents(astro_mo8) <- "cell_type"
-candidate_genes <- c("GAD1", "GAD2", "SLC6A1", "SLC32A1")
+candidate_genes <- c("GAD1", "GAD2", "SLC6A1", "SLC32A1") # GAD1, GAD2, VGAT (SLC32A1), GAT‑1 (SLC6A1)
 target_cells <- WhichCells(astro_mo8, idents = "GABA_INH")
 expr_mat <- GetAssayData(astro_mo8, slot = "data", assay = "RNA")
 avg_expr <- rowMeans(expr_mat[, target_cells, drop = FALSE]) 
@@ -457,4 +457,3 @@ for (g in candidate_genes) { # histogram
     abline(v = avg_expr[g], col = "red", lty = 2, lwd = 2)
     text(x = avg_expr[g], y = 0.6 * max(hist(avg_expr, plot = FALSE)$counts),
          labels = g, col = "red", srt = 90, pos = 4)}}
-                        
