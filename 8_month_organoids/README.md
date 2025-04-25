@@ -1,7 +1,7 @@
 This folder contains code for the 8‑month organoids scRNA‑seq analysis, including data distribution checks, clustering and annotation, differential expression analysis, and cell–cell communication analysis.
 
 ## Software environment
-All analyses were performed in R (version 4.2.2) under CentOS Linux 7 (Core) using conda environments. The complete output of `sessionInfo()` for both the general scRNA‑seq analyses and the cell–cell communication analyses are shown below:
+All analyses were performed in R under CentOS Linux 7 (Core) using conda environments. The complete output of `sessionInfo()` for both the general scRNA‑seq analyses and the cell–cell communication analyses are shown below:
 
 ### General scRNA‑seq analyses
 ```r
