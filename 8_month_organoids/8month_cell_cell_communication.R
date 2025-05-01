@@ -74,10 +74,7 @@ cellchat_1 <- aggregateNet(cellchat_1)
 execution.time = Sys.time() - ptm
 print(as.numeric(execution.time, units = "secs"))
 #> [1] 466.5054
-cellchat_1 <- aggregateNet(cellchat_1)
-execution.time = Sys.time() - ptm
-print(as.numeric(execution.time, units = "secs"))
-#> [1] 488.0222
+
 groupSize_1 <- as.numeric(table(cellchat_1@idents))
 par(mfrow = c(1,2), xpd=TRUE)
 netVisual_circle(cellchat_1@net$count, vertex.weight = groupSize_1, weight.scale = T, label.edge= F, title.name = "Number of interactions")
