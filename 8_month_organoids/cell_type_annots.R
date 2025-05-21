@@ -195,7 +195,7 @@ unique_markers <- lapply(names(deg_clusters), function(cluster_name) {
   return(current_unique)})
 names(unique_markers) <- paste0("unique_deg_cl", 0:7)
 
-for (i in 0:11) {
+for (i in 0:7) {
   name <- paste0("unique_deg_cl", i)
   assign(name, unique_markers[[name]])}
                         
