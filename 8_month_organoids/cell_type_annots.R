@@ -193,8 +193,12 @@ unique_markers <- lapply(names(deg_clusters), function(cluster_name) {
   unique_genes <- setdiff(current_genes, other_genes)
   current_unique <- current_deg[current_deg$gene %in% unique_genes, ]
   return(current_unique)})
-names(unique_markers) <- names(deg_clusters)
+names(unique_markers) <- paste0("unique_deg_cl", 0:7)
 
+for (i in 0:11) {
+  name <- paste0("unique_deg_cl", i)
+  assign(name, unique_markers[[name]])}
+                        
 #### cluster 0
 nrow(unique_deg_cl0) #84
 unique_deg_cluster0_down <- unique_deg_cl0 %>%
