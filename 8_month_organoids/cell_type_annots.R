@@ -406,7 +406,7 @@ DimPlot(astro_mo8, reduction = "umap", group.by = "sub.cluster", label = TRUE) +
   ggtitle("Subcluster")
 Idents(astro_mo8) <- "sub.cluster"
 cells_4_0 <- WhichCells(astro_mo8, idents = "4_0")
-astro_mo8@meta.data[cells_4_0, "cell_type"] <- "OPC_ODC"
+astro_mo8@meta.data[cells_4_0, "cell_type"] <- "OPC"
 cells_4_1 <- WhichCells(astro_mo8, idents = "4_1")
 astro_mo8@meta.data[cells_4_1, "cell_type"] <- "ASC"
 cells_4_2 <- WhichCells(astro_mo8, idents = "4_2")
@@ -416,17 +416,17 @@ astro_mo8@meta.data[cells_4_3, "cell_type"] <- "TBD"
 
 Idents(astro_mo8) <- "seurat_clusters"
 cells_0 <- WhichCells(astro_mo8, idents = "0")
-astro_mo8@meta.data[cells_0, "cell_type"] <- "neurons"
+astro_mo8@meta.data[cells_0, "cell_type"] <- "TBD" # might be some neurons
 cells_1 <- WhichCells(astro_mo8, idents = "1")
-astro_mo8@meta.data[cells_1, "cell_type"] <- "division"
+astro_mo8@meta.data[cells_1, "cell_type"] <- "Dividing_cells"
 cells_2 <- WhichCells(astro_mo8, idents = "2")
 astro_mo8@meta.data[cells_2, "cell_type"] <- "TBD"
 cells_3 <- WhichCells(astro_mo8, idents = "3")
-astro_mo8@meta.data[cells_3, "cell_type"] <- "division"
+astro_mo8@meta.data[cells_3, "cell_type"] <- "Dividing_cells"
 cells_5 <- WhichCells(astro_mo8, idents = "5")
-astro_mo8@meta.data[cells_5, "cell_type"] <- "KCC2_EX"
+astro_mo8@meta.data[cells_5, "cell_type"] <- "EX"
 cells_6 <- WhichCells(astro_mo8, idents = "6")
-astro_mo8@meta.data[cells_6, "cell_type"] <- "NKCC1_pos_cells"
+astro_mo8@meta.data[cells_6, "cell_type"] <- "NKCC1_EX"
 cells_7 <- WhichCells(astro_mo8, idents = "7")
 astro_mo8@meta.data[cells_7, "cell_type"] <- "TBD"
 DimPlot(astro_mo8, group.by = "cell_type", reduction = "umap", label = T, repel = TRUE) #just check
@@ -438,7 +438,7 @@ FeaturePlot(astro_mo8, features = "GAD1", reduction = "umap", cols = c("lightgre
 FeaturePlot(astro_mo8, features = "SLC6A1", reduction = "umap", cols = c("lightgrey", "red")) #GAT1 expression
 Idents(astro_mo8) <- "sub.cluster"
 cells_0_0 <- WhichCells(astro_mo8, idents = "0_0")
-astro_mo8@meta.data[cells_0_0, "cell_type"] <- "GABA_INH"
+astro_mo8@meta.data[cells_0_0, "cell_type"] <- "INH"
 DimPlot(astro_mo8, group.by = "cell_type", reduction = "umap", label = T, repel = TRUE) #check
 table(astro_mo8@meta.data$cell_type) #check
 
