@@ -1,6 +1,5 @@
 # NKCC1 (SLC12A2) / KCC2 (SLC12A5) chloride transporter expression - 8-month organoids
-## higher NKCC1:KCC2 = more depolarizing GABA response; the ratio drops over development (Ebihara 1995, Ganguly 2001)
-# Jiarui Chen
+
 
 library(dplyr)
 library(Seurat)
