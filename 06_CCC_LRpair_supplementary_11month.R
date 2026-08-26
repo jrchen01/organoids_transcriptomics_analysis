@@ -1,5 +1,5 @@
 # CellChat supplementary - LR pair / pathway level differential signaling, 11-month organoids
-## GABA-B and Glutamate pathways for Inhibitory 3 and Inhibitory 4, not part of Fig 5c-d
+## GABA-B and Glutamate pathways for Inhibitory 3 and Inhibitory 4
 ## needs the subtype-level CellChat objects from 05_CCC_11month.R
 # Jiarui Chen
 
