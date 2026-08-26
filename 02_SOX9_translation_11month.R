@@ -1,5 +1,5 @@
 # SOX9 vs translation module score - 11-month (>10 to 13 months) organoids
-# Jiarui Chen
+
 
 library(Seurat)
 library(dplyr)
