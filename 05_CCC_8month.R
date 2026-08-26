@@ -34,14 +34,14 @@ run_cellchat <- function(seurat_group) {
   cellchat
 }
 
-## subtype level (Fig 5a-b)
+## subtype level
 cellchat_sub_ad <- run_cellchat(subset(seurat, subset = diagnosis == "sAD"))
 cellchat_sub_nc <- run_cellchat(subset(seurat, subset = diagnosis == "CTRL"))
 
 saveRDS(cellchat_sub_ad, "/home/jchen/data1/jchen/project/01_sarah_proj/05_organoids/02_results/01_ccc/ccc_8mo_non_protein_AD_subtype.rds")
 saveRDS(cellchat_sub_nc, "/home/jchen/data1/jchen/project/01_sarah_proj/05_organoids/02_results/01_ccc/ccc_8mo_non_protein_NC_subtype.rds")
 
-## major cell-class level - not in Fig 5, kept for reference
+## major cell-class level
 run_cellchat_major <- function(seurat_group) {
   matrix_data <- seurat_group@assays$RNA$data %>% na.omit()
   cellchat <- createCellChat(object = matrix_data, meta = seurat_group@meta.data, group.by = "cell")
