@@ -1,6 +1,5 @@
 # Cell-cell communication (CellChat) - 11-month (>10 to 13 months) organoids
 ## same design as 05_CCC_8month.R; subcluster is meta.data$cell here, major class is meta.data$cell.major
-# Jiarui Chen
 
 library(Seurat)
 library(CellChat)
