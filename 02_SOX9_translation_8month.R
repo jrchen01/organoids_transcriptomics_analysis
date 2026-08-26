@@ -1,5 +1,4 @@
 # SOX9 vs translation module score - 8-month organoids
-# Jiarui Chen
 
 library(Seurat)
 library(dplyr)
