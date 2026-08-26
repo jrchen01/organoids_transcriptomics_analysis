@@ -1,6 +1,4 @@
 # NKCC1 (SLC12A2) / KCC2 (SLC12A5) chloride transporter expression - 11-month (>10 to 13 months) organoids
-## subcluster label lives in meta.data$cell here, not $subcluster - see 01_clustering_11month.R
-# Jiarui Chen
 
 library(dplyr)
 library(Seurat)
