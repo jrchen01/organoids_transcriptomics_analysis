@@ -1,5 +1,4 @@
 # QC, Harmony integration, clustering, annotation, and Figure 1 - 8-month organoids
-# Jiarui Chen
 
 library(Seurat)
 library(dplyr)
