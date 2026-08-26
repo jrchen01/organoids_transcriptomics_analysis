@@ -1,7 +1,5 @@
 # Cell-cell communication (CellChat) - 8-month organoids
 ## CellChat run separately per diagnosis group, restricted to "Non-protein Signaling" in CellChatDB.human
-## Fig 5a-b use the subtype-level objects; major-class level built below just for reference
-# Jiarui Chen
 
 library(Seurat)
 library(CellChat)
