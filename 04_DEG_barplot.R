@@ -5,7 +5,7 @@ library(dplyr)
 library(ggplot2)
 library(tidyr)
 
-## 8-month data (Fig 4A)
+## 8-month data
 mo8_sig_res <- readRDS("/home/jchen/data1/jchen/project/01_sarah_proj/05_organoids/02_results/04_DEG/8mo_deseq2_sig_DEG.rds")
 
 deg_counts_mo8 <- lapply(names(mo8_sig_res), function(x) {
