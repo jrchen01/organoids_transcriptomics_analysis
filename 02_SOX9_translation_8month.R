@@ -6,7 +6,7 @@ library(ggplot2)
 
 load("/raidixshare_logg01/thais/SarahF/organoids/seurat_8mo_harmony_regressedRibog.rda")
 
-## Fig 3C - cell-cycle phase UMAP
+## cell-cycle phase UMAP
 df_toPlot <- cbind(Embeddings(object = seurat, reduction = "umap"), seurat@meta.data)
 colnames(df_toPlot)[c(1:2)] <- c("UMAP1", "UMAP2")
 
@@ -43,7 +43,7 @@ translation_genes <- c(
 
 seurat <- AddModuleScore(seurat, features = list(translation_genes), name = "GOBP_Translation")
 
-## Fig 3B - UMAP of the translation module score
+## UMAP of the translation module score
 p <- FeaturePlot(seurat, features = "GOBP_Translation1", min.cutoff = "q10", combine = FALSE)
 
 p_gobp_mo8 <- lapply(p, function(x) {
@@ -64,7 +64,7 @@ pdf("/raidixshare_logg01/jchen/project/01_sarah_proj/05_organoids/02_results/06_
 print(p_gobp_mo8)
 dev.off()
 
-## Fig 3A - SOX9 expression vs translation module score correlation
+## SOX9 expression vs translation module score correlation
 a <- FetchData(seurat, vars = c("GOBP_Translation1", "SOX9", "HIF1A"))
 cor_result <- cor.test(a$GOBP_Translation1, a$SOX9)
 print(cor_result)
