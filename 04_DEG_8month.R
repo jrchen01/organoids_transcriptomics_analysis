@@ -1,6 +1,4 @@
 # Pseudobulk DESeq2 (sAD vs CTRL) - 8-month organoids
-## significant = Wald test, raw p < 0.05, |log2FC| > 0.25 - the padj-based flag in run_pseudobulk_deseq2()'s own CSVs isn't what's used here
-# Jiarui Chen
 
 library(Seurat)
 library(dplyr)
