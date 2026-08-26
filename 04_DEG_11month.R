@@ -1,6 +1,4 @@
 # Pseudobulk DESeq2 (sAD vs CTRL) - 11-month (>10 to 13 months) organoids
-## same significance rule as 04_DEG_8month.R: Wald test, raw p < 0.05, |log2FC| > 0.25
-# Jiarui Chen
 
 library(Seurat)
 library(dplyr)
