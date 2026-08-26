@@ -34,7 +34,7 @@ theme_academic <- function(base_size = 8) {
     )
 }
 
-## per-cell-type outgoing/incoming counts and strengths from a CellChat object, tagged with a group label
+## per-cell-type outgoing/incoming counts and strengths from a CellChat object
 extract_signaling_data <- function(cellchat_obj, group_name) {
   cell_types <- levels(cellchat_obj@idents)
 
@@ -95,7 +95,7 @@ create_cellchat_academic_plot <- function(combined_data, metric = "count", direc
     theme(axis.text.x = element_text(angle = 80, hjust = 1, vjust = 1))
 }
 
-## classify cell types into Excitatory/Inhibitory/Non-neurons by E/I substring match - fragile but works given the label naming
+## classify cell types into Excitatory/Inhibitory/Non-neurons by E/I substring match
 .classify_cell_types <- function(all_cell_types) {
   exc_neurons <- sort(all_cell_types[grepl("E", all_cell_types)])
   inh_neurons <- sort(all_cell_types[grepl("I", all_cell_types)])
@@ -108,7 +108,7 @@ create_cellchat_academic_plot <- function(combined_data, metric = "count", direc
   cell_category
 }
 
-## horizontal diverging bar plot of log2FC(condition/ref), bars beyond x_limit get clipped and labeled
+## horizontal diverging bar plot of log2FC(condition/ref)
 plot_diff_barplot_2group <- function(df, all_cell_types, condition = "AD", ref = "Control",
                                       threshold = 0.5, x_limit = 1.5, title = "Differential output (log2FC)") {
 
