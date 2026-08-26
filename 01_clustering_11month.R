@@ -142,7 +142,7 @@ cols_sub <- c(
   "grey80", "grey70"                            # Unknown 1-2
 )
 
-## Fig 2A/2C - UMAP, major class and subcluster
+## UMAP, major class and subcluster
 p_sub <- ggplot(df_toPlot, aes(x = UMAP1, y = UMAP2, color = cell)) +
   geom_point(size = 0.6, stroke = 0) +
   scale_color_manual(values = cols_sub) +
@@ -175,7 +175,7 @@ pdf("/raidixshare_logg01/jchen/project/01_sarah_proj/05_organoids/02_results/05_
 p_sub + p_main
 dev.off()
 
-## Fig 2B/2D - marker heatmaps (z-score of mean expression)
+## marker heatmaps (z-score of mean expression)
 marker_genes_major <- c("TUBB3", "MAP2", "GAD1", "GAD2", "SLC17A7", "SLC17A6",
                          "SOX9", "CENPK", "OLIG1", "PDGFRA", "GFAP", "AQP4",
                          "PAX6", "KLF4", "CDKN1A")
