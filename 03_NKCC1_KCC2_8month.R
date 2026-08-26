@@ -56,7 +56,7 @@ plot_gene_violin <- function(seurat_obj, gene, cell_type_col = "cell",
   list(plot = p, data = plot_data, stats = stats)
 }
 
-## same, but split by sAD ("AD") vs CTRL ("NC")
+## split by sAD ("AD") vs CTRL ("NC")
 plot_gene_by_diagnosis <- function(seurat_obj, gene, cell_type_col = "cell",
                                     diagnosis_col = "diagnosis", gene_label = NULL,
                                     ad_color = "#E64B35", ctrl_color = "#4DBBD5") {
@@ -129,7 +129,7 @@ dev.off()
 write.csv(result_NKCC1$stats, row.names = FALSE, file = "/home/jchen/data1/jchen/project/01_sarah_proj/05_organoids/02_results/02_check_genes/plots/8mo_NKCC1_expression_stats.csv")
 write.csv(result_KCC2$stats,  row.names = FALSE, file = "/home/jchen/data1/jchen/project/01_sarah_proj/05_organoids/02_results/02_check_genes/plots/8mo_KCC2_expression_stats.csv")
 
-## Fig 3G-H - Excitatory/Inhibitory neuron subclusters, sAD vs CTRL
+## Excitatory/Inhibitory neuron subclusters, sAD vs CTRL
 seurat_neuron <- subset(seurat, subset = subcluster %in%
                            c("Excitatory 1", "Excitatory 2", "Inhibitory 1", "Inhibitory 2"))
 
@@ -146,7 +146,7 @@ dev.off()
 write.csv(result_nkcc1_diagnosis$stats, row.names = FALSE, file = "/home/jchen/data1/jchen/project/01_sarah_proj/05_organoids/02_results/02_check_genes/plots/8mo_NKCC1_expression_diagnosis_stats.csv")
 write.csv(result_kcc2_diagnosis$stats,  row.names = FALSE, file = "/home/jchen/data1/jchen/project/01_sarah_proj/05_organoids/02_results/02_check_genes/plots/8mo_KCC2_expression_diagnosis_stats.csv")
 
-## Fig 3I - mean SLC12A2:SLC12A5 ratio by diagnosis, Excitatory 1/2
+## mean SLC12A2:SLC12A5 ratio by diagnosis, Excitatory 1/2
 mean_expr_summary <- result_nkcc1_diagnosis$stats %>%
   rename(mean_SLC12A2 = mean) %>%
   select(CellType, Diagnosis, mean_SLC12A2) %>%
