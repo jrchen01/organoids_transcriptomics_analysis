@@ -34,7 +34,7 @@ run_cellchat <- function(seurat_group, group_by) {
   cellchat
 }
 
-## subtype level (Fig 5c-d)
+## subtype level
 cellchat_sub_ad <- run_cellchat(subset(seurat, subset = diagnosis == "sAD"), group_by = "cell")
 cellchat_sub_nc <- run_cellchat(subset(seurat, subset = diagnosis == "CTRL"), group_by = "cell")
 
