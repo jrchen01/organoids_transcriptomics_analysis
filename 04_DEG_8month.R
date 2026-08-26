@@ -32,7 +32,7 @@ seurat@meta.data <- seurat@meta.data %>%
     )
   )
 
-## donor sex / APOE genotype, not in the source object's metadata
+## donor sex / APOE genotype
 seurat@meta.data$sex <- NA
 seurat@meta.data$apoe <- NA
 
@@ -87,7 +87,6 @@ de_results_list <- lapply(celltypes_to_analyze, function(ct) {
   })
 })
 names(de_results_list) <- paste0("de_result_", celltypes_to_analyze)
-## Fibroblast fails here - model matrix not full rank, only 5 donors (2 vs 3)
 
 ## extract significant genes: Wald test, pvalue < 0.05, split by direction
 significant_results <- list()
