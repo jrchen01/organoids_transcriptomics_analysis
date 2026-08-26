@@ -1,7 +1,6 @@
 # CellChat supplementary - LR pair / pathway level differential signaling, 8-month organoids
-## GABA-B and Glutamate pathways for Excitatory 1 and Inhibitory 2, not part of Fig 5a-b
+## GABA-B and Glutamate pathways for Excitatory 1 and Inhibitory 2
 ## needs the subtype-level CellChat objects from 05_CCC_8month.R
-# Jiarui Chen
 
 library(Seurat)
 library(CellChat)
