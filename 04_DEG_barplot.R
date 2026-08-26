@@ -1,6 +1,5 @@
-# Figure 4: number of DEGs per cell subtype
+# Number of DEGs per cell subtype
 ## reads the sig-DEG lists from 04_DEG_8month.R / 04_DEG_11month.R
-# Jiarui Chen
 
 library(dplyr)
 library(ggplot2)
