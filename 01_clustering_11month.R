@@ -1,6 +1,5 @@
 # QC, Harmony integration, clustering, annotation, and Figure 2 - 11-month (>10 to 13 months) organoids
 ## meta.data$cell = subcluster label at this timepoint, meta.data$cell.major = major class (flipped naming vs 8-month object)
-# Jiarui Chen
 
 library(Seurat)
 library(dplyr)
