@@ -1,5 +1,5 @@
-# pseudobulk DESeq2 helper, used by 04_DEG_8month.R and 04_DEG_11month.R
-# Jiarui Chen
+# pseudobulk DESeq2 helper
+
 
 library(Seurat)
 library(SingleCellExperiment)
