@@ -1,4 +1,5 @@
-# CellChat plotting helpers, shared by the 05_CCC_* and 06_CCC_LRpair_* scripts
+# CellChat plotting helpers
+
 
 library(ggplot2)
 library(dplyr)
