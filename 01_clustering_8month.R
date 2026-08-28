@@ -67,10 +67,6 @@ levels(seurat$cell) <- c("Glial cells", "Inhibitory neurons", "Excitatory neuron
 Idents(seurat) <- "cell"
 
 ## subcluster-level clustering and annotation
-# moved the diagnosis merge below to right after this block - in the original
-# interactive session it happened much later, but seurat@meta.data gets fully
-# overwritten there and needs to keep the subcluster column
-# cluster "0" here is from the resolution=0.3 run right above it, taking that on faith from the source
 seurat <- FindClusters(seurat, resolution = 0.3, graph.name = "neighbors.harmony.by.donor")
 
 subcluster_result <- FindSubCluster(seurat, cluster = "0",
@@ -107,7 +103,7 @@ seurat@meta.data <- p
 
 save(seurat, file = "/raidixshare_logg01/thais/SarahF/organoids/seurat_8mo_harmony_regressedRibog.rda")
 
-# Figure 1: UMAP + marker heatmaps
+# UMAP + marker heatmaps
 # meta.data$cell = major class, meta.data$subcluster = subtype
 
 df_toPlot <- cbind(Embeddings(object = seurat, reduction = "umap"), seurat@meta.data)
