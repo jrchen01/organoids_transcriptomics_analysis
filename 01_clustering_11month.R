@@ -57,7 +57,7 @@ seurat <- RunHarmony(seurat, c("Channel", "patient_id"))
 seurat <- FindNeighbors(seurat, dims = 1:30, reduction = "harmony", graph.name = "neighbors.harmony.by.donor")
 seurat <- RunUMAP(seurat, dims = 1:30, reduction = "harmony", reduction.name = "umap")
 
-## major cell-class clustering and annotation (17 clusters at res 0.4)
+## major cell-class clustering and annotation
 seurat <- FindClusters(seurat, resolution = 0.4, graph.name = "neighbors.harmony.by.donor")
 
 s.genes <- fread("~/data1/SarahF/organoids/G1.S.cellCycle.genes", data.table = FALSE, header = FALSE)$V1
@@ -70,11 +70,10 @@ levels(seurat$cell) <- c("Astrocyte 1", "Astrocyte 2", "Inhibitory 1", "Dividing
                           "Inhibitory 2", "Inhibitory 4", "OPC", "Astrocyte 3", "Excitatory 1",
                           "Senescent cells", "Unknown 1", "Excitatory 2", "Fibroblast 2",
                           "Dedifferentiating cells", "Unknown 2", "Inhibitory 1")
-# clusters 2 and 16 both get the "Inhibitory 1" label and merge into one level
+
 Idents(seurat) <- "cell"
 
-## split "Inhibitory 1" into Inhibitory 1 / Inhibitory 3, reclassify cycling
-## "Inhibitory 4" cells as dividing cells
+
 subcluster_result <- FindSubCluster(seurat, cluster = "Inhibitory 1",
                                      graph.name = "neighbors.harmony.by.donor",
                                      subcluster.name = "subcluster",
@@ -95,7 +94,7 @@ p$cell <- factor(p$cell, levels = c("Inhibitory 1", "Inhibitory 2", "Inhibitory 
 seurat@meta.data <- p
 Idents(seurat) <- "cell"
 
-## major cell-class grouping, derived from the 18-level subcluster
+## major cell-class grouping
 seurat$cell.major <- factor(seurat$cell)
 levels(seurat$cell.major) <- c(rep("Inhibitory neurons", 4), rep("Excitatory neurons", 2),
                                 "Dividing cells", "Dividing cells", rep("Glial cells", 4),
@@ -114,12 +113,11 @@ seurat$cell.major <- factor(seurat$cell.major,
 
 save(seurat, file = "/raidixshare_logg01/thais/SarahF/organoids/seurat_11mo_harmony_regressedRibog.rda")
 
-# Figure 2: UMAP + marker heatmaps
+# UMAP + marker heatmaps
 
 df_toPlot <- cbind(Embeddings(object = seurat, reduction = "umap"), seurat@meta.data)
 colnames(df_toPlot)[c(1:2)] <- c("UMAP1", "UMAP2")
 
-## color palettes - same major class uses shades of one hue
 cols_main <- c(
   "Inhibitory neurons"      = "#3b6b9e",  # blue
   "Excitatory neurons"      = "#6d8c3c",  # olive green
