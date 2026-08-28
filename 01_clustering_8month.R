@@ -1,4 +1,4 @@
-# QC, Harmony integration, clustering, annotation, and Figure 1 - 8-month organoids
+# QC, Harmony integration, clustering, annotation - 8-month organoids
 
 library(Seurat)
 library(dplyr)
