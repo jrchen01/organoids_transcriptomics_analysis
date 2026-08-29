@@ -61,7 +61,7 @@ pdf("/raidixshare_logg01/jchen/project/01_sarah_proj/05_organoids/02_results/04_
 print(p_mo8)
 dev.off()
 
-## 11-month data (Fig 4B)
+## 11-month data
 mo11_sig_res <- readRDS("/home/jchen/data1/jchen/project/01_sarah_proj/05_organoids/02_results/04_DEG/11mo_deseq2_sig_DEG.rds")
 
 deg_counts_mo11 <- lapply(names(mo11_sig_res), function(x) {
