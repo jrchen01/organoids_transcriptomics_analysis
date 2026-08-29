@@ -44,7 +44,6 @@ table_data <- seurat@meta.data %>%
 print(table_data)
 
 ## collapse "cell" (subcluster) into DESeq2-safe labels, spaces -> underscores
-## labels not listed here pass through unchanged (e.g. "OPC")
 seurat@meta.data <- seurat@meta.data %>%
   mutate(
     subcluster2 = case_when(
