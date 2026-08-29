@@ -200,7 +200,7 @@ boxplot_theme <- theme_classic(base_size = 12) +
   )
 
 ex1 <- subset(pseudo, cell == "Excitatory 1")
-print(wilcox.test(log_ratio ~ diagnosis, data = ex1))
+# print(wilcox.test(log_ratio ~ diagnosis, data = ex1))
 
 p_exc1 <- ggplot(ex1, aes(x = diagnosis, y = log_ratio, fill = diagnosis)) +
   geom_boxplot(outlier.shape = NA, width = 0.6, alpha = 0.6, linewidth = 0.6) +
@@ -210,7 +210,7 @@ p_exc1 <- ggplot(ex1, aes(x = diagnosis, y = log_ratio, fill = diagnosis)) +
   boxplot_theme
 
 ex2 <- subset(pseudo, cell == "Excitatory 2")
-print(wilcox.test(log_ratio ~ diagnosis, data = ex2))
+# print(wilcox.test(log_ratio ~ diagnosis, data = ex2))
 
 p_exc2 <- ggplot(ex2, aes(x = diagnosis, y = log_ratio, fill = diagnosis)) +
   geom_boxplot(outlier.shape = NA, width = 0.6, alpha = 0.6, linewidth = 0.6) +
