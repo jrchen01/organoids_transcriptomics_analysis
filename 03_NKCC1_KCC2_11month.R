@@ -160,8 +160,7 @@ mean_expr_summary <- result_nkcc1_diagnosis$stats %>%
   )
 
 print(mean_expr_summary)
-## this whole block isn't from the original notebooks - wrote it to reproduce
-## the "Mean Expression" table in the report; path follows the other 11mo outputs
+
 write.csv(mean_expr_summary, row.names = FALSE, file = "/home/jchen/data1/jchen/project/01_sarah_proj/05_organoids/02_results/02_check_genes/plots/11mo_NKCC1_KCC2_mean_expression_ratio_summary.csv")
 
 rm(seurat, seurat_neuron)
