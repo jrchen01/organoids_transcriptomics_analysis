@@ -85,7 +85,6 @@ seurat$subcluster <- factor(seurat$subcluster, levels = c("Inhibitory 1", "Inhib
 Idents(seurat) <- "subcluster"
 
 ## diagnosis assignment
-# donor IDs show up in a couple different spellings (UCI22 vs UCI-22 etc), matching both
 patient <- seurat@meta.data
 patient <- patient[!duplicated(patient$patient_id), ]
 patient$diagnosis <- NA
