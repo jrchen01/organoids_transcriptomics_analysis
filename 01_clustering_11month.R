@@ -13,7 +13,6 @@ library(ComplexHeatmap)
 raw_data_path <- "/netapp/LOG-G4/mcuoco/sarah_organoid/scrnaseq_cellranger/preprocess/01_filter/filtered.rds"
 
 ## QC filtering, 11-month channel subset
-# 3483 and ADRC_2800 were part of the 8-month cohort but aren't in the 11-month one
 seurat <- readRDS(raw_data_path)
 
 a <- seurat@meta.data
