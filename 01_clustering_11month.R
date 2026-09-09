@@ -105,10 +105,6 @@ seurat$cell.major <- factor(seurat$cell.major,
                                         "Fibroblast", "Unknown"))
 
 ## diagnosis assignment
-# unlike the 8-month source, this timepoint's source never explicitly assigns
-# a diagnosis column - by the time it's used downstream it's already there,
-# so it's probably already in the raw filtered.rds metadata. if it's missing
-# here, check the CTRL/sAD donor split in 04_DEG_11month.R and Table 2
 
 save(seurat, file = "/raidixshare_logg01/thais/SarahF/organoids/seurat_11mo_harmony_regressedRibog.rda")
 
