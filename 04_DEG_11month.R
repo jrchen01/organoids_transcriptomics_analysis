@@ -18,7 +18,7 @@ sig_deg_rds <- "/home/jchen/data1/jchen/project/01_sarah_proj/05_organoids/02_re
 load("/raidixshare_logg01/thais/SarahF/organoids/seurat_11mo_harmony_regressedRibog.rda")
 
 ## donor sex / APOE genotype, not in the source object's metadata
-## only 8 of the 11 donors from 8 months show up here - 3483, ADRC_2800, and the MCI donor 3341 are gone
+## ## donor sex / APOE genotype (8 donors at 11 months)
 seurat@meta.data$sex <- NA
 seurat@meta.data$apoe <- NA
 
