@@ -105,6 +105,20 @@ seurat$cell.major <- factor(seurat$cell.major,
                                         "Fibroblast", "Unknown"))
 
 ## diagnosis assignment
+patient <- seurat@meta.data
+patient <- patient[!duplicated(patient$patient_id), ]
+patient$diagnosis <- NA
+patient[patient$patient_id %in% c("UCI22", "UCI-22", "ADRC_2800", "ADRC-2800", "UCI2", "UCI-2",
+                                   "UCI96", "UCI-96", "2991", "ADRC-2991", "3341", "ADRC-3341"), "diagnosis"] <- "sAD"
+patient[patient$patient_id %in% c("UCI52", "UCI-52", "UCI40", "UCI-40c7", "3551", "ADRC-3551",
+                                   "40", "ADRC-40", "3483", "ADRC-3483"), "diagnosis"] <- "CTRL"
+
+p <- seurat@meta.data
+p$cellID <- rownames(p)
+p <- merge(p, patient[, c("patient_id", "diagnosis")], by = "patient_id")
+rownames(p) <- p$cellID
+p <- p[colnames(seurat), ]
+seurat@meta.data <- p
 
 save(seurat, file = "/raidixshare_logg01/thais/SarahF/organoids/seurat_11mo_harmony_regressedRibog.rda")
 
