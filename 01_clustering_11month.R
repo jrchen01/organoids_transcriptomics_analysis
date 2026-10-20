@@ -139,14 +139,14 @@ cols_main <- c(
 )
 
 cols_sub <- c(
-  "#1f4e79", "#3b6b9e", "#6a9cc7", "#a1c4e0",  # Inhibitory 1-4 (dark -> pale blue)
-  "#3b6b2f", "#6d8c3c", "#8fb35a", "#b5d48a",  # Excitatory 1-4 (dark -> pale green)
-  "#7b3294", "#d8b7dd",                        # Glial 1-2 (dark -> pale purple)
-  "#5abf4b",                                    # Dividing
-  "#e08214", "#fdb863",                        # Dedifferentiating 1-2 (dark -> pale orange)
-  "#e06060",                                    # Senescent
-  "#b2182b", "#8c510a",                        # Fibroblast 1-2 (dark -> pale red)
-  "grey80", "grey70"                            # Unknown 1-2
+  "#1f4e79", "#3b6b9e", "#6a9cc7", "#a1c4e0",  
+  "#3b6b2f", "#6d8c3c", "#8fb35a", "#b5d48a",  
+  "#7b3294", "#d8b7dd",                        
+  "#5abf4b",                                   
+  "#e08214", "#fdb863",                        
+  "#e06060",                                   
+  "#b2182b", "#8c510a",                        
+  "grey80", "grey70"                            
 )
 
 ## UMAP, major class and subcluster
