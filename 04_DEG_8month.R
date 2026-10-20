@@ -47,7 +47,7 @@ donor_info <- list(
   "ADRC_2800" = c(sex = "M", apoe = "34"),
   "2991"      = c(sex = "M", apoe = "33"),
   "UCI96"     = c(sex = "F", apoe = "44"),
-  "3341"      = c(sex = "M", apoe = "34")  # MCI donor, excluded downstream (diagnosis %in% c("CTRL","sAD") only)
+  "3341"      = c(sex = "M", apoe = "34")
 )
 for (pid in names(donor_info)) {
   seurat@meta.data[seurat@meta.data$patient_id == pid, "sex"]  <- donor_info[[pid]]["sex"]
