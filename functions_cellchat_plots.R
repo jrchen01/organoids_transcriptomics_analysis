@@ -220,7 +220,7 @@ plot_signal_barplot_2group <- function(df, all_cell_types, condition = "AD", ref
 
 ## differential chord diagram, adapted from https://github.com/mjgirgenti/PTSDsnDLPFC/blob/main/CCC/netVisual_chord.R
 ## red = higher in AD, blue = higher in Control
-## range_value NULL auto-scales to max(abs(net$prob)) - that's what 11mo used; 8mo used a fixed 0.5, pass range_value = 0.5 to match
+## range_value: color scale limit; NULL = max(abs(net$prob))
 my_netVisual_chord <- function(net.diff, edge.transparency = FALSE, signaling.name = NULL, color.use = NULL, thresh = 0.05, vertex.receiver = NULL, sources.use = NULL, targets.use = NULL, idents.use = NULL, top = 1, remove.isolate = FALSE,
                                 vertex.weight = 1, vertex.weight.max = NULL, vertex.size.max = NULL,
                                 measure = c("weight", "count"),
