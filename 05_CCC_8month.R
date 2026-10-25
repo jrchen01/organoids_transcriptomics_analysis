@@ -64,7 +64,7 @@ cellchat_major_nc <- run_cellchat_major(subset(seurat, subset = diagnosis == "CT
 saveRDS(cellchat_major_ad, "/home/jchen/data1/jchen/project/01_sarah_proj/05_organoids/02_results/01_ccc/ccc_8mo_non_protein_AD_major.rds")
 saveRDS(cellchat_major_nc, "/home/jchen/data1/jchen/project/01_sarah_proj/05_organoids/02_results/01_ccc/ccc_8mo_non_protein_NC_major.rds")
 
-# Fig 5a - circle plots, Fig 5b - outgoing/incoming signal bar graphs
+# circle plots, outgoing/incoming signal bar graphs
 ad_data <- extract_signaling_data(cellchat_sub_ad, "AD")
 nc_data <- extract_signaling_data(cellchat_sub_nc, "NC")
 combined_data <- rbind(ad_data, nc_data)
